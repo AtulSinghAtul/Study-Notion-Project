@@ -26,7 +26,7 @@ app.use(
   cors({
     // origin: "http://localhost:3000",
     // origin:"https://zesty-griffin-29e4f3.netlify.app/",
-    origin:"https://tourmaline-basbousa-5130c9.netlify.app/",
+    origin:"https://tourmaline-basbousa-5130c9.netlify.app",
     
     credentials: true, //access-control-allow-credentials:true
     optionSuccessStatus: 200,
