@@ -24,8 +24,8 @@ app.use(cookieParser());
 // for connecting frontend from backend
 app.use(
   cors({
-    //  origin: "http://localhost:3000",
-    
+
+
     origin:"https://study-notion-made-by-atul-singh.netlify.app",
 
     

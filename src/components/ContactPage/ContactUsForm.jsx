@@ -41,7 +41,9 @@ const ContactUsForm = () => {
 
   return (
     <form
+
       className="flex flex-col gap-7 w-full"
+
       onSubmit={handleSubmit(submitContactForm)}
     >
       <div className="flex flex-col gap-5 lg:flex-row">
@@ -54,11 +56,13 @@ const ContactUsForm = () => {
             name="firstname"
             id="firstname"
             placeholder="Enter first name"
+
             
             style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
 
             {...register("firstname", { required: true })}
           />
@@ -77,10 +81,12 @@ const ContactUsForm = () => {
             name="lastname"
             id="lastname"
             placeholder="Enter last name"
+
             style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
             {...register("lastname")}
           />
         </div>
@@ -95,10 +101,12 @@ const ContactUsForm = () => {
           name="email"
           id="email"
           placeholder="Enter email address"
+
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
           {...register("email", { required: true })}
         />
         {errors.email && (
@@ -120,10 +128,12 @@ const ContactUsForm = () => {
               name="firstname"
               id="firstname"
               placeholder="Enter first name"
+
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
               {...register("countrycode", { required: true })}
             >
               {CountryCode.map((ele, i) => {
@@ -141,10 +151,12 @@ const ContactUsForm = () => {
               name="phonenumber"
               id="phonenumber"
               placeholder="12345 67890"
+
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
               {...register("phoneNo", {
                 required: {
                   value: true,
@@ -173,10 +185,12 @@ const ContactUsForm = () => {
           cols="30"
           rows="7"
           placeholder="Enter your message here"
+
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
           {...register("message", { required: true })}
         />
         {errors.message && (

@@ -186,12 +186,14 @@ export default function CourseInformationForm() {
         <input
           id="courseTitle"
           placeholder="Enter Course Title"
+
           
           {...register("courseTitle", { required: true })}
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
         />
         {errors.courseTitle && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
@@ -208,7 +210,7 @@ export default function CourseInformationForm() {
           id="courseShortDesc"
           placeholder="Enter Description"
           {...register("courseShortDesc", { required: true })}
-          
+
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
@@ -216,6 +218,7 @@ export default function CourseInformationForm() {
         />
         {errors.courseShortDesc && (
           
+
           <span className="ml-2 text-xs tracking-wide text-pink-200">
             Course Description is required
           </span>
@@ -237,11 +240,12 @@ export default function CourseInformationForm() {
                 value: /^(0|[1-9]\d*)(\.\d+)?$/,
               },
             })}
-           
+
             style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5 !pl-12"
+
           />
           <HiOutlineCurrencyRupee className="absolute left-3 top-1/2 inline-block -translate-y-1/2 text-2xl text-richblack-400" />
         </div>
@@ -261,10 +265,12 @@ export default function CourseInformationForm() {
           {...register("courseCategory", { required: true })}
           defaultValue=""
           id="courseCategory"
+
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
         >
           <option value="" disabled>
             Choose a Category
@@ -311,12 +317,13 @@ export default function CourseInformationForm() {
           id="courseBenefits"
           placeholder="Enter benefits of the course"
           {...register("courseBenefits", { required: true })}
-          
+
 
           style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="form-style w-full resize-x-none min-h-[130px] rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+
         />
         {errors.courseBenefits && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">

@@ -10,11 +10,13 @@ import { apiConnector } from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 import { ACCOUNT_TYPE } from "../../utils/constants";
 import ProfileDropdown from "../core/Auth/ProfileDropDown";
+
 import Modal from "./Modal"
 
 
 function Navbar() {
 const [flag, setFlag]= useState(false)
+
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
@@ -42,15 +44,16 @@ const [flag, setFlag]= useState(false)
     return matchPath({ path: route }, location.pathname);
   };
 
- 
 
   return (
     <div
       className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
         location.pathname !== "/" ? "bg-richblack-800" : ""
+
       } transition-all duration-200 relative`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between relative ">
+
         {/* Logo */}
         <Link to="/">
           <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
@@ -145,6 +148,7 @@ const [flag, setFlag]= useState(false)
           )}
           {token !== null && <ProfileDropdown />}
         </div>
+
       
   
         <button onClick={()=>setFlag(true)} className="mr-4 md:hidden">
@@ -153,6 +157,7 @@ const [flag, setFlag]= useState(false)
         {!flag ?"":<Modal setFlag={setFlag}/>}
       </div>
      
+
     </div>
   );
 }
